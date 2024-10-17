@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Nom de mon super site</h1>
+            <div class="global-menu">
+                <button>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="#">link01</a></li>
+                        <li><a href="#">link02</a></li>
+                        <li><a href="#">link03</a></li>
+                        <li><a href="#">link04</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section>
+           <article>
+            <figure>
+                <picture>
+                    <!-- la balise picture permet de conditionner l'affichage d'un media en interpretant 
+                     les informations contenu dans [source] et conditionné par son parametre "media".
+                     - [source] possede le parametre "srcset" qui va chercher une ressource, et le parametre
+                     media qui, comme un @media query de css, permet de conditionner l'affichage de la [source]
+                     ou non
+                     Exemple : si l'ecran est à minimum 1280px alors affiche le "srcset" sinon passe a "source" suivant
+                     sinon affiche [img] par défaut  -->
+                    <source srcset="img/blog/alexey-pyatov-mary-celeste.jpg" media="(min-width:1280px)">
+                    <source srcset="img/blog/middle/alexey-pyatov-station.jpg" media="(min-width:768px)">
+                    <img src="img/blog/mini/alexey-pyatov-mary-celeste.jpg" alt="">
+                </picture>
+            </figure>
+           </article>
+           <article>
+            <figure>
+                <picture>
+                    <source srcset="img/blog/alexey-pyatov-station.jpg" media="(min-width:1280px)">
+                    <source srcset="img/blog/middle/alexey-pyatov-station.jpg" media="(min-width:768px)">
+                    <img src="img/blog/mini/alexey-pyatov-station.jpg" alt="">
+                </picture>
+            </figure>
+           </article>
+           <article>
+            <figure>
+                <picture>
+                    <source srcset="img/blog/Cabine.jpg" media="(min-width:1280px)">
+                    <source srcset="img/blog/middle/Cabine.jpg" media="(min-width:768px)">
+                    <img src="img/blog/mini/Cabine.jpg" alt="">
+                </picture>
+            </figure>
+           </article>
+           <article>
+            <figure>
+                <picture>
+                    <source srcset="img/blog/ceinture-d'astéroïdes.jpg" media="(min-width:1280px)">
+                    <source srcset="img/blog/middle/ceinture-d'astéroïdes.jpg" media="(min-width:768px)">
+                    <img src="img/blog/mini/ceinture-d'astéroïdes.jpg" alt="">
+                </picture>
+            </figure>
+           </article>
+        </section>
+        <footer></footer>
+    </main>
+</body>
+</html>

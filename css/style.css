@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+main{
+    padding-top: 100px;
+}
+
+main>header{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background-color: rgba(0, 0,0,0.5);
+}
+main>header h1{
+    width: 50%;
+}
+/** menu **/
+.global-menu{
+    position: fixed;
+    top: -1%;
+    right: -1%;
+    width: 91%;
+    height: 102%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow:  0 0 5px  0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    z-index: 11;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/** le btn burger **/
+.global-menu button{
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.global-menu button span,
+.global-menu button span::before,
+.global-menu button span::after{
+    position: absolute;
+    width: 36px;
+    height: 4px;
+    background-color:#000;
+}
+.global-menu button span{
+    top: 18px;
+    left: 2px;
+}
+.global-menu button span::before,
+.global-menu button span::after{
+    content: '';
+    left: 0;
+}
+.global-menu button span::before{
+    top: -12px;
+}
+.global-menu button span::after{
+    top: 12px;
+}
+
+
+ul{
+    display: flex;
+    background-color: rgb(219, 124, 124);
+    width: 400px;
+    list-style: none;
+}
+ul li{
+    width: 25%;
+}
+/** fin menu **/
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+section article{
+    margin: 20px;
+    width: calc(100% - 40px);
+    background-color: blueviolet;
+}
+section article figure, section article picture{
+    width: 100%;
+    display: flex;
+}
+section article figure img{
+    width: 100%;
+}
+
+@media screen and (min-width:768px){
+    section{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section article{
+        width: calc(50% - 40px);
+    }
+}
+@media screen and (min-width:1280px){
+    section article{
+        width: calc(25% - 40px);
+    }
+}
